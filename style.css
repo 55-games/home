@@ -121,3 +121,35 @@ body {
 .btn-download:hover {
     background-color: #8ed629;
 }
+/* Overlay de Pesquisa no canto inferior esquerdo */
+.search-container {
+    position: fixed; /* Fixa na tela */
+    bottom: 20px;    /* Distância do fundo */
+    right: 20px;      /* Distância da esquerda */
+    z-index: 1000;   /* Garante que fique acima dos cards */
+}
+
+#searchInput {
+    width: 250px;
+    padding: 12px 20px;
+    border: none;
+    background-color: rgba(11, 16, 20, 0.85); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);              /* Efeito de desfoque atrás */
+    color: white;
+    border-radius: 4px;                      /* Bordas arredondadas (estilo pílula) */
+    outline: none;
+    border: 1px solid rgba(117, 176, 34, 0.5); /* Borda sutil verde */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    width: 320px;                             /* Expande ao clicar */
+    border-color: #75b022;                    /* Brilha o verde ao focar */
+    background-color: rgba(11, 16, 20, 0.95);
+}
+
+#searchInput::placeholder {
+    color: #8f98a0;
+    font-style: italic;
+}
